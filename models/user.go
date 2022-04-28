@@ -9,8 +9,6 @@ import (
 //User is the model that governs all notes objects retrived or inserted into the DB
 type User struct {
     ID            primitive.ObjectID `bson:"_id"`
-    FirstName    *string            `json:"first_name"`
-    LastName     *string            `json:"last_name" `
     UserName     *string            `json:"user_name" validate:"required,min=2,max=100"`
     Password      *string            `json:"Password" validate:"required,min=6""`
     Email         *string            `json:"email" validate:"email,required"`
